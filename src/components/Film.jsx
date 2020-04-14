@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Film = ({ name, description, prices: { buy, rent } }) => (
-  <div>
+  <div className='film-element'>
     <h3>{ name }</h3>
 
     <p>{ description }</p>

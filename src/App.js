@@ -13,12 +13,15 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    let films = props.films.sort(sortByYear);
     let tvSeasons = props.tv_seasons.sort(sortByYear);
+    let filmsOnTv = tvSeasons.filter(i => i.episodes.length === 1);
+
+    let films = [...filmsOnTv, ...props.films]
+    let sortedFilms = films.sort(sortByYear);
 
     this.state = {
-      films,
       tvSeasons,
+      films: sortedFilms,
       currentView: 'films'
     };
   }

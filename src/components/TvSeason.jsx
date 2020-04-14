@@ -1,8 +1,14 @@
 import React from 'react';
 
-const TvSeason = ({ name, description, prices: { buy, rent } }) => (
-  <div>
+const TvFilmBadge = () => (
+  <span className='tv-film-badge'>TV Film</span>
+);
+
+const TvSeason = ({ name, description, episodes, prices: { buy, rent } }) => (
+  <div className='tv-season-element'>
     <h3>{ name }</h3>
+
+    { episodes.length === 1 &&  <TvFilmBadge /> }
 
     <p>{ description }</p>
 

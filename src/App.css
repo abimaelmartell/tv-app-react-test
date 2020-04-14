@@ -37,3 +37,22 @@
   background-color: #666;
   color: #FFF;
 }
+
+.tv-season-element,
+.film-element {
+  position: relative;
+  border-bottom: 1px solid #FFF;
+}
+
+.tv-season-element:last-child,
+.film-element:last-child {
+  border-bottom: 0;
+}
+
+.tv-film-badge {
+  display: inline-block;
+  background-color: #222;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 12px;
+}
