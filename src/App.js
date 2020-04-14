@@ -5,13 +5,20 @@ import './App.css';
 import Films from './components/Films';
 import TvSeasons from './components/TvSeasons';
 
+const sortByYear = (a, b) => (
+  a.release > b.release ? 1 : -1
+);
+
 class App extends Component {
   constructor(props) {
     super(props);
 
+    let films = props.films.sort(sortByYear);
+    let tvSeasons = props.tv_seasons.sort(sortByYear);
+
     this.state = {
-      films: props.films,
-      tvSeasons: props.tv_seasons,
+      films,
+      tvSeasons,
       currentView: 'films'
     };
   }
