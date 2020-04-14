@@ -6,7 +6,7 @@ const Film = ({ name, description, prices: { buy, rent } }) => (
 
     <p>{ description }</p>
 
-    <p>Rent: ${ rent }, Buy: ${ buy }</p>
+    <p><strong>Rent:</strong> ${ rent }, <strong>Buy:</strong> ${ buy }</p>
   </div>
 );
 

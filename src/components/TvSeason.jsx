@@ -12,7 +12,8 @@ const TvSeason = ({ name, description, episodes, prices: { buy, rent } }) => (
 
     <p>{ description }</p>
 
-    <p>Rent: ${ rent }, Buy: ${ buy }</p>
+
+    <p><strong>Rent:</strong> ${ rent }, <strong>Buy:</strong> ${ buy }, <strong>Number of Episodes:</strong> { episodes.length }</p>
   </div>
 );
 
